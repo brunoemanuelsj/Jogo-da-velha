@@ -1,0 +1,155 @@
+body {
+    background-color:rgb(13, 184, 176);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.start {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btgeneric {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    height: auto;
+    width: 300px;
+    border-radius: 20px;
+    background-color: orangered;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+@keyframes btderrota {
+    0% {color: transparent; background-color: transparent;}
+    100% {color: white; background-color: orangered;}   
+}
+
+.imgDerrotaClass {
+    position: absolute;
+    width: 300px;
+    height: 232px;
+    background-image: url(src/images/derrota.jpg);
+    background-repeat: no-repeat;
+    animation: imgDerrota 1.5s forwards;
+}
+
+@keyframes imgDerrota {
+    0% {height: 0; margin-top: 50%;}
+    100% {height: 232px; margin-top: 0;} 
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+.moleclass {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    font-size: 25px;
+    width: 300px;
+    color: white;
+    text-align: center;
+}
+
+.impossivelClass {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.veiaxgaloClass2 {
+    position: absolute;
+    top: 380px;
+    width: 300px;
+    height: 275px;
+    background-image: url(src/images/impossivel.gif);
+    background-repeat: no-repeat;
+    animation: veiaxgalo 1s forwards;
+}
+
+.derrotaClass {
+    position: absolute;
+    top: 330px;
+    height: auto;
+    left: 50%;
+    margin-left: -150px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.retV {
+    position: absolute;
+    width: 98px;
+    margin-left: 98px;
+    border-left: solid 2px white;
+    border-right: solid 2px white; 
+    animation: retV 1s forwards;
+}
+
+.retH {
+    position: absolute;
+    height: 98px;
+    margin-top: 98px;
+    border-top: solid 2px white;
+    border-bottom : solid 2px white;
+    animation: retH 1s forwards;
+}
+
+@keyframes retH {
+    0% {margin-left : 150px; width: 0px;}
+    100%{margin-left: 0px; width: 100%;}
+}
+
+@keyframes retV {
+    0% {margin-top : 150px; height: 0px;}
+    100%{margin-top: 0px; height: 100%;}
+}
+
+@keyframes derrotaText {
+    0% {color: transparent;}
+    100% {color: white;}
+}
+
+@keyframes fight {
+    0% {color: transparent;}
+    20% {color: white;}
+    40% {color: transparent;}
+    60% {color: white;}
+    80% {color: transparent;}
+    100% {color: white;}
+}
+
+.boxClass {
+    position:absolute;
+    width: 90px;
+    height: 90px;
+}
+
+@keyframes veiaxgalo {
+    0% {height: 0;}
+    100%{height: 275;}
+}
+
+.mark {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 70px;
+    color: white;
+}

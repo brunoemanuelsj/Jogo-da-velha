@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="start" class="start">
+        <img src="src/images/imagem1.jpg" alt="Veia_img" style="margin-bottom: 80px;"><br>
+        <button class="btgeneric" onclick="start()">START</button>
+    </div>
+
+    <div id="options" class="start" style="display: none;">
+        <img src="src/images/imagem1.jpg" alt="Veia_img" style="margin-bottom: 40px;"><br>
+        <div style="font-size: 40px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;">Dificuldade:</div><br>
+        <button class="btgeneric" onclick="mole()">Mole</button><br><br>
+        <button class="btgeneric" onclick="impossivel()">Impossível</button><br><br>
+    </div>
+
+    <div id="molee" class="moleclass" style="display: none;">
+        <div style="margin-bottom: 120px;">Não há opção 'mole' na vida volte e escolha outra opção.</div><br>
+        <img src="src/images/mole.gif" alt="VelhaTocandoGuitarra.gif" style="margin-bottom: 120px;"><br>
+        <button class="btgeneric" onclick="undoMole()">Voltar</button>
+    </div>
+
+    <audio id="audioMole" src="src/audio/audioMole.mp3"></audio>
+
+    <div id="impossivell" class="impossivelClass" style="display: none;">
+        <div class="retV"></div>
+        <div class="retH"></div>
+
+        <div id="box1" class="boxClass" onclick="marcarbox(box1x, box1o)">
+            <div id="box1x" class="mark">X</div>
+            <div id="box1o" class="mark">O</div>
+        </div>
+
+        <div id="box2" class="boxClass" style="margin-left: 102px;" onclick="marcarbox(box2x, box2o)">
+            <div id="box2x" class="mark">X</div>
+            <div id="box2o" class="mark">O</div>
+        </div>
+
+        <div id="box3" class="boxClass" style="margin-left: 204px;" onclick="marcarbox(box3x, box3o)">
+            <div id="box3x" class="mark">X</div>
+            <div id="box3o" class="mark">O</div>
+        </div>
+
+        <div id="box4" class="boxClass" style="margin-top: 102px;" onclick="marcarbox(box4x, box4o)">
+            <div id="box4x" class="mark">X</div>
+            <div id="box4o" class="mark">O</div>
+        </div>
+
+        <div id="box5" class="boxClass" style="margin-top: 102px; margin-left: 102px;" onclick="marcarbox(box5x, box5o)">
+            <div id="box5x" class="mark">X</div>
+            <div id="box5o" class="mark">O</div>
+        </div>
+        
+        <div id="box6" class="boxClass" style="margin-top: 102px; margin-left: 204px;" onclick="marcarbox(box6x, box6o)">
+            <div id="box6x" class="mark">X</div>
+            <div id="box6o" class="mark">O</div>
+        </div>
+
+        <div id="box7" class="boxClass" style="margin-top: 204px;" onclick="marcarbox(box7x, box7o)">
+            <div id="box7x" class="mark">X</div>
+            <div id="box7o" class="mark">O</div>
+        </div>
+
+        <div id="box8" class="boxClass" style="margin-top: 204px; margin-left: 102px" onclick="marcarbox(box8x, box8o)">
+            <div id="box8x" class="mark">X</div>
+            <div id="box8o" class="mark">O</div>
+        </div>
+
+        <div id="box9" class="boxClass" style="margin-top: 204px; margin-left: 204px;" onclick="marcarbox(box9x, box9o)">
+            <div id="box9x" class="mark">X</div>
+            <div id="box9o" class="mark">O</div>
+        </div>
+
+        <div id="fight" style="position: absolute; left: 50%; margin-left: -61px; top: 320px; animation: fight 1.5s forwards;">Fight!!!</div>
+        <div id="imgImpossivel" class="veiaxgaloClass2"></div>
+    </div>
+    
+    <audio id="audioImpossivel" src="src/audio/audioImpossivel.mp3"></audio>
+
+    <div  id="derrota" class="derrotaClass" style="display: none;">
+        <div style="margin-bottom: 10px; animation: derrotaText 1.5s forwards;">Você Perdeu :(</div>
+        <button class="btgeneric" onclick="mainMenu()" style="animation: btderrota 0.5s forwards;">Voltar</button><br>
+        <div class="imgDerrotaClass"></div>
+        <audio id="audioDerrota" src="src/audio/derrota.mp3"></audio>
+    </div>
+
+    <div  id="empate" class="derrotaClass" style="display: none;">
+        <div style="margin-bottom: 10px; animation: derrotaText 1.5s forwards;">Deu velha !!</div>
+        <button class="btgeneric" onclick="mainMenu()" style="animation: btderrota 0.5s forwards;">Voltar</button><br>
+        <video id="videoempate" src="src/video/CuteFerretDancing.mp4" loop style="width: 300px; height: 308px;"></video>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
