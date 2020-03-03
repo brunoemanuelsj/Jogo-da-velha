@@ -1,6 +1,6 @@
 # Jogo-da-velha
 
-# Jogo-da-velha-web
+
 
 link github pages:
 https://brunoemanuelsj.github.io/Jogo-da-velha-web/
